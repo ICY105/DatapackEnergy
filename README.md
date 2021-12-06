@@ -17,7 +17,8 @@ energy.data
 ```
 energy.storage
   Indicates how much power is stored in this machine.
-  Typically a 'generator' type machine will increase this number to create power, and a consuming machine will subtract from this number.
+  Typically a 'generator' type machine will increase this number to create power,
+  and a consuming machine will subtract from this number to use power.
 ```
 
 ```
@@ -28,7 +29,9 @@ energy.max_storage
 ```
 energy.transfer_rate
   Indicates how much power a machine or cable can transfer.
-  Cables are network limited, so if 3 machines have 50 units of energy (total 150 units) and cables can transfer a total of 100 units, then 2 machines will be emptied to 0, but the remaining machine will have 50 units left over. The rate of a network is limited by the lowest tier cable.
+  Cables are network limited, so if 3 machines have 50 units of energy (total 150 units)
+  and cables can transfer a total of 100 units, then 2 machines will be emptied to 0, but
+  the remaining machine will have 50 units left over. The rate of a network is limited by the lowest tier cable.
 ```
 
 ## Marker Tags
@@ -38,11 +41,12 @@ energy.send
   Enables a machine to send energy (ie. a generator)
 ```
 
-`
+```
 energy.receive 
   Enables a machine to receive energy (ie. a consumer of power)
-  A storage medium (ie. battery) can have both send and receive. Batteries to not transfer power between each other to avoid infinite loops.
-`
+  A storage medium (ie. battery) can have both send and receive.
+  Batteries to not transfer power between each other to avoid infinite loops.
+```
 
 ```
 energy.cable
