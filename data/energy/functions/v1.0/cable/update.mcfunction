@@ -5,11 +5,11 @@ scoreboard players operation #cable.network_id energy.data = @s energy.network_i
 
 #up
 scoreboard players set #cable.direction energy.data 0
-execute align xyz positioned ~ ~-1 ~ as @e[type=#energy:valid_block_entities,dx=0,dy=0,dz=0] at @s run function energy:v1.0/cable/update_2
+execute align xyz positioned ~ ~1 ~ as @e[type=#energy:valid_block_entities,dx=0,dy=0,dz=0] at @s run function energy:v1.0/cable/update_2
 
 #down
 scoreboard players set #cable.direction energy.data 1
-execute align xyz positioned ~ ~1 ~ as @e[type=#energy:valid_block_entities,dx=0,dy=0,dz=0] at @s run function energy:v1.0/cable/update_2
+execute align xyz positioned ~ ~-1 ~ as @e[type=#energy:valid_block_entities,dx=0,dy=0,dz=0] at @s run function energy:v1.0/cable/update_2
 
 #north
 scoreboard players set #cable.direction energy.data 2
