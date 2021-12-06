@@ -31,7 +31,8 @@ energy.transfer_rate
   Indicates how much power a machine or cable can transfer.
   Cables are network limited, so if 3 machines have 50 units of energy (total 150 units)
   and cables can transfer a total of 100 units, then 2 machines will be emptied to 0, but
-  the remaining machine will have 50 units left over. The rate of a network is limited by the lowest tier cable.
+  the remaining machine will have 50 units left over. 
+  The rate of a network is limited by the lowest tier cable.
 ```
 
 ## Marker Tags
