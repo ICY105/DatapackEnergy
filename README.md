@@ -38,11 +38,11 @@ energy.send
   Enables a machine to send energy (ie. a generator)
 ```
 
-```
+`
 energy.receive 
   Enables a machine to receive energy (ie. a consumer of power)
   A storage medium (ie. battery) can have both send and receive. Batteries to not transfer power between each other to avoid infinite loops.
-```
+`
 
 ```
 energy.cable
