@@ -13,4 +13,4 @@ scoreboard players add @s energy.network_id_east 0
 scoreboard players add @s energy.network_id_west 0
 
 #update adjacent cables
-function energy:v1.0/machine/update_adjacent_cables
+function energy:v1.0/machine/update_adjacent
