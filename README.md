@@ -10,7 +10,7 @@ energy.data
   Used for math, passing variables between functions, and storing a bit of data on a machine.
   Cables' energy.data value is a binary encoded number indicating which sides are connected, ie:
     63 -> 1  1  1  1  1  1 -> all sides are active
-	      32 16 8  4  2  1
+	  32 16 8  4  2  1
     This can be used to update the model to display connections.
 ```
 
@@ -35,6 +35,24 @@ energy.transfer_rate
   The rate of a network is limited by the lowest tier cable.
 ```
 
+```
+energy.usage_rate
+  This is a computed score equal to the change in power of machine, before
+  transfering. That is, if a Machine has 50 units of power, then generates 25 units (total
+  75 units), then sends all 75 units to a battery, this score is equal to 25 units (for the
+  25 units of power generated before transfering it all out of the machine).
+  This score is provided as a convienent source of data and should not be changed manually.
+```
+
+```
+energy.change_rate
+  This is a computed score equal to the change in power of machine, after
+  transfering. That is, if a Machine has 50 units of power, then generates 25 units (total
+  75 units), then sends all 75 units to a battery, this score is equal to -50 units
+  (it started at 50 units, gained 25, then removed 75, so (50 + 25 - 75) - 50 = -50).
+  This score is provided as a convienent source of data and should not be changed manually.
+```
+
 ## Marker Tags
 
 ```
@@ -52,22 +70,6 @@ energy.receive
 ```
 energy.cable
   Indicates object is a cable, and should connect machines.
-```
-
-## Function Tags
-
-```
-function #energy:v1/cable_can_connect
-  Executed as a machine
-  Used to disable cables connecting to a machine from certain sides.
-  #cable.in energy.data -> 0-5 indicating direction (up, down, north, south, east, west)
-  #cable.out energy.data -> 1 for can connect, 0 for cannot connect
-```
-
-```
-function #energy:v1/cable_update
-  Called as and at a cable when an update is trigged, such as a machine being placed next to it.
-  Intended use is to update the cable's model, but can be used for other updates.
 ```
 
 ## Function Calls
@@ -90,4 +92,41 @@ function energy:v1/api/break_cable
 ```
 function energy:v1/api/break_machine
   Call on a machine when broken to remove its connections
+```
+
+```
+function energy:v1/api/modify_player_energy
+  Call on a player to add or remove power from items stored in their inventory.
+  #player.in energy.data -> amount of energy to add (+) or remove (-)
+  #player.out energy.data <- 0 for failed to modify inv, 1 for suceeded.
+```
+
+## Function Tags
+
+```
+function #energy:v1/cable_can_connect
+  Executed as a machine
+  Used to disable cables connecting to a machine from certain sides.
+  #cable.in energy.data -> 0-5 indicating direction (up, down, north, south, east, west)
+  #cable.out energy.data -> 1 for can connect, 0 for cannot connect
+```
+
+```
+function #energy:v1/cable_update
+  Called as and at a cable when an update is trigged, such as a machine being placed next to it.
+  Intended use is to update the cable's model, but can be used for other updates.
+```
+
+```
+function #energy:v1/update_energy_item
+  Called as a player when an item has been modified by the modify_player_energy function.
+  The Item will be in storage at energy:temp list[0] - Modify this as needed (such as adding Lore
+  specifying how much energy is stored in the item).
+```
+
+## NBT Format
+
+```
+Item that store power use the following format:
+Item.tag.energy{storage:<amount>,max_storage:<max_amount>}
 ```
