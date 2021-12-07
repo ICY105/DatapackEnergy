@@ -1,6 +1,6 @@
 # DatapackEnergy
 A Minecraft Datapack library for handling energy systems, such as for Mechanization or Simple Energy. This library manages the following:
-* Scoreboard data defining how energy is stored and transfer
+* Scoreboard data defining how energy is stored and transfered
 * Designating custom blocks as devices that can send energy (ie. a generator that produces power and sends it to machines)
 * Designating custom blocks as devices that can receive energy (ie. a machine that receives power and consumes it to do a task)
 * Designating custom blocks as devices that both send and receive energy (ie. a battery that can receive and store power, then send it to machines)
