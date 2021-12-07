@@ -97,6 +97,8 @@ function energy:v1/api/break_machine
 ```
 function energy:v1/api/modify_player_energy
   Call on a player to add or remove power from items stored in their inventory.
+  This treats the entire inv as a single pool of energy, and does not modify
+  power on specific items.
   #player.in energy.data -> amount of energy to add (+) or remove (-)
   #player.out energy.data <- 0 for failed to modify inv, 1 for suceeded.
 ```
