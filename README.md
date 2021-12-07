@@ -12,6 +12,7 @@ A Minecraft Datapack library for handling energy systems, such as for Mechanizat
 This is an embedded library, so you package it inside your datapack as opposed to having a separate download. Requires [LanternLoad](https://github.com/LanternMC/load) to operate.
 
 ## Scoreboards
+These are scoreboard objectives used to represent a value of some kind.
 
 ```
 energy.data
@@ -64,6 +65,7 @@ energy.change_rate
 ```
 
 ## Marker Tags
+These are tags (added throught the /tag command) that mark entities as being something, or as needing to do something.
 
 ```
 energy.send 
@@ -82,6 +84,7 @@ energy.cable
 ```
 
 ## Function Calls
+Function calls are called by you to trigger certian events or features.
 
 ```
 function energy:v1/api/init_cable
@@ -113,6 +116,7 @@ function energy:v1/api/modify_player_energy
 ```
 
 ## Function Tags
+Functions tags are called by Datapack Energy to inform you an event has happened, and to allow you to make changes to the event. To use these calls, you must add a function to the tag list.
 
 ```
 function #energy:v1/cable_can_connect
@@ -136,6 +140,7 @@ function #energy:v1/update_energy_item
 ```
 
 ## NBT Format
+These are NBT data specifications for items, storage, or entities that hold special data.
 
 ```
 Item that store power use the following format:
