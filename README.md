@@ -1,5 +1,5 @@
 # DatapackEnergy
-A Minecraft Datapack library for handling energy systems, such as for Mechanization or Simple Energy.
+A Minecraft Datapack library for handling energy systems, such as for Mechanization or Simple Energy. This library manages transfering power between machines, as well supporting devices like cables for connecting machines and items that store energy in a player's inventory.
 
 This is an embedded library, so you package it inside your datapack as opposed to having a separate download. Requires LanternLoad to operate.
 
