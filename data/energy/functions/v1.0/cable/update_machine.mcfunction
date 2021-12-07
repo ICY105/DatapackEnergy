@@ -6,8 +6,8 @@ scoreboard players set #cable.out energy.data 1
 function #energy:v1/cable_can_connect
 
 #assign network id
-execute if score #cable.out energy.data matches 1 if score #cable.direction energy.data matches 0 run scoreboard players operation @s energy.network_id_up = #cable.network_id energy.data
-execute if score #cable.out energy.data matches 1 if score #cable.direction energy.data matches 1 run scoreboard players operation @s energy.network_id_down = #cable.network_id energy.data
+execute if score #cable.out energy.data matches 1 if score #cable.direction energy.data matches 1 run scoreboard players operation @s energy.network_id_up = #cable.network_id energy.data
+execute if score #cable.out energy.data matches 1 if score #cable.direction energy.data matches 0 run scoreboard players operation @s energy.network_id_down = #cable.network_id energy.data
 execute if score #cable.out energy.data matches 1 if score #cable.direction energy.data matches 2 run scoreboard players operation @s energy.network_id_north = #cable.network_id energy.data
 execute if score #cable.out energy.data matches 1 if score #cable.direction energy.data matches 3 run scoreboard players operation @s energy.network_id_south = #cable.network_id energy.data
 execute if score #cable.out energy.data matches 1 if score #cable.direction energy.data matches 4 run scoreboard players operation @s energy.network_id_east = #cable.network_id energy.data

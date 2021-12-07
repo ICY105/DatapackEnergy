@@ -30,5 +30,4 @@ execute if score #energy.machine_rate energy.data matches 1.. unless score #ener
 
 #assign
 scoreboard players operation #energy.machine_rate_max energy.data -= #energy.machine_rate energy.data
-
 scoreboard players operation @s energy.storage -= #energy.machine_rate_max energy.data

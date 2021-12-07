@@ -5,6 +5,8 @@ execute if score #energy.major load.status matches ..0 run scoreboard players se
 execute if score #energy.major load.status matches 1 if score #energy.minor load.status matches ..-1 run scoreboard players set #energy.minor load.status 0
 
 scoreboard objectives add energy.data dummy
+scoreboard objectives add energy.usage_rate dummy
+scoreboard objectives add energy.change_rate dummy
 
 scoreboard objectives add energy.storage dummy
 scoreboard objectives add energy.max_storage dummy
