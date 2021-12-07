@@ -11,7 +11,7 @@ A Minecraft Datapack library for handling energy systems, such as for Mechanizat
 
 This is an embedded library, so you package it inside your datapack as opposed to having a separate download. Requires [LanternLoad](https://github.com/LanternMC/load) to operate.
 
-Note: Datapack Energy does not enforce any in-game notation for how energy is convayed, and in this document simply refers to energy in terms of 'units.' However, by convention real world units are most commonly used (kJ or kW/h, kW).
+Note: Datapack Energy does not enforce any in-game notation for how energy is convayed, and in this document simply refers to energy in terms of 'units.' However, by convention real world units are most commonly used (kJ or kWh, kW).
 
 ## Scoreboards
 These are scoreboard objectives used to represent a value of some kind.
