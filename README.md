@@ -28,7 +28,8 @@ energy.max_storage
 
 ```
 energy.transfer_rate
-  Indicates how much power a machine or cable can transfer.
+  Indicates how much power a machine or cable can transfer. Should be positive on all
+  machines *and* cables. Set to max 32-bit integer for unlimited transfer.
   Cables are network limited, so if 3 machines have 50 units of energy (total 150 units)
   and cables can transfer a total of 100 units, then 2 machines will be emptied to 0, but
   the remaining machine will have 50 units left over. 
@@ -58,13 +59,12 @@ energy.change_rate
 ```
 energy.send 
   Enables a machine to send energy (ie. a generator)
-```
-
-```
+  
 energy.receive 
   Enables a machine to receive energy (ie. a consumer of power)
   A storage medium (ie. battery) can have both send and receive.
   Batteries to not transfer power between each other to avoid infinite loops.
+  Machines will transfer energy when adjacent, without the need for cables.
 ```
 
 ```
