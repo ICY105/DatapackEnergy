@@ -66,7 +66,7 @@ energy.change_rate
   This score is provided as a convienent source of data and should not be changed manually.
 ```
 
-## Marker Tags
+## Selector Tags
 These are tags (added throught the /tag command) that mark entities as being something, or as needing to do something.
 
 ```
