@@ -5,6 +5,7 @@ A Minecraft Datapack library for handling energy systems, such as for Mechanizat
 * Designating custom blocks as devices that can receive energy (ie. a machine that receives power and consumes it to do a task)
 * Designating custom blocks as devices that both send and receive energy (ie. a battery that can receive and store power, then send it to machines)
 * Designating custom blocks as a cable that connects and transfers energy between other devices
+* Automatic transfering of energy between machines adjacent to each other, or connected through a cable
 * Standards for items that store energy in the player's inventory, with the ability to add and remove energy from a player's inventory
 * Supporting functions for all of these features
 
