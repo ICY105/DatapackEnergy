@@ -19,7 +19,8 @@ energy.data
   Cables' energy.data value is a binary encoded number indicating which sides are connected, ie:
     63 -> 1  1  1  1  1  1 -> all sides are active
 	  32 16 8  4  2  1
-    This can be used to update the model to display connections.
+    This can be used to update the model to display connections when 
+    function #energy:v1/cable_update is triggered.
 ```
 
 ```
@@ -115,7 +116,7 @@ function energy:v1/api/modify_player_energy
 
 ```
 function #energy:v1/cable_can_connect
-  Executed as a machine
+  Executed as and at a machine.
   Used to disable cables connecting to a machine from certain sides.
   #cable.in energy.data -> 0-5 indicating direction (up, down, north, south, east, west)
   #cable.out energy.data -> 1 for can connect, 0 for cannot connect
