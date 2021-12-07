@@ -1,7 +1,14 @@
 # DatapackEnergy
-A Minecraft Datapack library for handling energy systems, such as for Mechanization or Simple Energy. This library manages transfering power between machines, as well supporting devices like cables for connecting machines and items that store energy in a player's inventory.
+A Minecraft Datapack library for handling energy systems, such as for Mechanization or Simple Energy. This library manages the following:
+* Scoreboard data defining how energy is stored and transfer
+* Designating custom blocks as devices that can send energy (ie. a generator that produces power and sends it to machines)
+* Designating custom blocks as devices that can receive energy (ie. a machine that receives power and consumes it to do a task)
+* Designating custom blocks as devices that both send and receive energy (ie. a battery that can receive and store power, then send it to machines)
+* Designating custom blocks as a cable that connects and transfers energy between other devices
+* Standards for items that store energy in the player's inventory, with the ability to add and remove energy from a player's inventory
+* Supporting functions for all of these features
 
-This is an embedded library, so you package it inside your datapack as opposed to having a separate download. Requires LanternLoad to operate.
+This is an embedded library, so you package it inside your datapack as opposed to having a separate download. Requires [LanternLoad](https://github.com/LanternMC/load) to operate.
 
 ## Scoreboards
 
