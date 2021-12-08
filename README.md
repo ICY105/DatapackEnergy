@@ -148,3 +148,10 @@ These are NBT data specifications for items, storage, or entities that hold spec
 Item that store power use the following format:
 Item.tag.energy{storage:<amount>,max_storage:<max_amount>}
 ```
+
+## How to use
+1. Install [LanternLoad](https://github.com/LanternMC/load) in your datapack
+2. Copy the `data/energy` folder into your data pack
+3. Merge the contents of `DatapackEnergy/data/load/tags/functions/load.json` and your own `data/load/tags/functions/load.json`
+4. Implement the API as described above.
+
