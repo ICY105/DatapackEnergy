@@ -1,3 +1,7 @@
+### Translations
+* [English](https://github.com/ICY105/DatapackEnergy/blob/main/README.md)
+* [Française](https://github.com/ICY105/DatapackEnergy/blob/main/README.fr.md)
+
 # Datapack Energy
 A Minecraft Datapack library for handling energy systems, such as for Mechanization or Simple Energy. This library manages the following:
 * Scoreboard data defining how energy is stored and transfered
