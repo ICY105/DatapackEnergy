@@ -1,3 +1,7 @@
+### Translations
+* [English](https://github.com/ICY105/DatapackEnergy/blob/main/README.md)
+* [Française](https://github.com/ICY105/DatapackEnergy/blob/main/README.fr.md)
+
 # Datapack Energy
 Une librairie Minecraft sous forme de Datapack pour gérer les systèmes d'énergie, comme pour Mechanization ou bien SimplEnergy. Cette librairie gère les éléments suivants :
 * Des Scoreboards qui définissent comment l'énergie est stockée et transférée
