@@ -62,7 +62,7 @@ energy.change_rate
   This is a computed score equal to the change in power of machine, after
   transfering. That is, if a Machine has 50 units of power, then generates 25 units (total
   75 units), then sends all 75 units to a battery, this score is equal to -50 units
-  (it started at 50 units, gained 25, then removed 75, so (50 + 25 - 75) - 50 = -50).
+  (it started at 50 units, gained 25, then removed 75, ending at 0: 0 - 50 = -50).
   This score is provided as a convienent source of data and should not be changed manually.
 ```
 
