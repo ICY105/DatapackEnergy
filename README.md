@@ -79,9 +79,10 @@ energy.send
   
 energy.receive 
   Enables a machine to receive energy (ie. a consumer of power)
-  A storage medium (ie. battery) can have both send and receive.
-  Batteries to not transfer power between each other to avoid infinite loops.
-  Machines will transfer energy when adjacent, without the need for cables.
+  
+A storage medium (ie. battery) can have both send and receive.
+Batteries do not transfer power between each other to avoid infinite loops.
+Machines will transfer energy when adjacent, without the need for cables.
 ```
 
 ```
@@ -95,9 +96,7 @@ Function calls are called by you to trigger certian events or features.
 ```
 function energy:v1/api/init_cable
   Call on a new cable to initialize its connections
-```
 
-```
 function energy:v1/api/init_machine
   Call on a new machine to initialize its connections
 ```
@@ -105,11 +104,13 @@ function energy:v1/api/init_machine
 ```
 function energy:v1/api/break_cable
   Call on a cable when broken to remove its connections
-```
 
-```
 function energy:v1/api/break_machine
   Call on a machine when broken to remove its connections
+  
+Failure to call these breaking functions has negitive side-effects
+like machines remaining in the same network without being connected.
+Make sure to call these when needed!
 ```
 
 ```
