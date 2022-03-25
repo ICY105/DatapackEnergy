@@ -1,4 +1,11 @@
 
+#set type
+scoreboard players set #machine.type energy.data 0
+execute if entity @s[tag=energy.send] run scoreboard players set #machine.type energy.data 1
+execute if entity @s[tag=energy.receive] run scoreboard players set #machine.type energy.data 2
+execute if entity @s[tag=energy.receive,tag=energy.send] run scoreboard players set #machine.type energy.data 3
+
+
 #update adjacent devices
 scoreboard players set #machine.direction energy.data 0
 scoreboard players set #machine.out energy.data 0
