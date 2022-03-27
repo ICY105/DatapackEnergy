@@ -29,3 +29,7 @@ execute align xyz positioned ~-1 ~ ~ as @e[type=#energy:valid_block_entities,dx=
 #update machine ids
 scoreboard players operation #predicate energy.data = #cable.temp energy.data
 execute as @e[type=#energy:valid_block_entities,tag=!energy.cable,predicate=energy:v1.1/has_network_id] at @s run function energy:v1.1/cable/break_reconnect
+
+#setup network transfer capacity
+scoreboard players reset * energy.transfer_capacity
+execute as @e[type=#energy:valid_block_entities,tag=energy.cable] at @s run function energy:v1.1/energy/setup_cables
