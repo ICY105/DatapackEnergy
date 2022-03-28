@@ -15,5 +15,8 @@ scoreboard objectives add energy.network_id_north dummy
 scoreboard objectives add energy.network_id_south dummy
 scoreboard objectives add energy.network_id_east dummy
 scoreboard objectives add energy.network_id_west dummy
+scoreboard objectives add energy.update_queue dummy
+
+scoreboard players set #20 energy.data 20
 
 schedule function energy:v1.1/tick 3t replace
