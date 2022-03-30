@@ -83,9 +83,9 @@ energy.send
 energy.receive
   Permet à une machine de recevoir de l'énergie (c-à-d : un consommateur d'énergie)
   
-  Un support de stockage (c-à-d : une batterie) peut à la fois envoyer et recevoir.
-  Les batteries ne transfèrent pas d'énergie entre elles pour éviter les boucles infinies.
-  Les machines transféreront l'énergie lorsqu'elles seront adjacentes, sans avoir besoin de câbles.
+Un support de stockage (c-à-d : une batterie) peut à la fois envoyer et recevoir.
+Les batteries ne transfèrent pas d'énergie entre elles pour éviter les boucles infinies.
+Les machines transféreront l'énergie lorsqu'elles seront adjacentes, sans avoir besoin de câbles.
 ```
 
 ```
@@ -99,9 +99,7 @@ Les appels de fonction sont appelés par vous pour déclencher certains évents 
 ```
 function energy:v1/api/init_cable
   À appeler sur un nouveau câble pour initialiser ses connexions
-```
 
-```
 function energy:v1/api/init_machine
   À appeler sur une nouvelle machine pour initialiser ses connexions
 ```
@@ -109,11 +107,13 @@ function energy:v1/api/init_machine
 ```
 function energy:v1/api/break_cable
   À appeler sur un câble lorsqu'il est cassé pour retirer ses connexions
-```
 
-```
 function energy:v1/api/break_machine
   À appeler sur une machine lorsqu'elle est cassée pour retirer ses connexions
+
+L'oubli de l'appel de ces fonctions de destructions a de graves conséquences négatives
+comme des machines qui restent dans le même réseau sans être connectées.
+Assurez-vous de les appeler quand cela est nécessaire !
 ```
 
 ```
