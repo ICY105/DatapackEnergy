@@ -3,7 +3,7 @@
 * [Française](https://github.com/ICY105/DatapackEnergy/blob/main/README.fr.md)
 
 # Datapack Energy
-A Minecraft Datapack library for handling energy systems, such as for Mechanization or Simple Energy. This library manages the following:
+A Minecraft Datapack library for handling energy systems, such as for Mechanization or SimplEnergy. This library manages the following:
 * Scoreboard data defining how energy is stored and transfered
 * Designating custom blocks as devices that can send energy (ie. a generator that produces power and sends it to machines)
 * Designating custom blocks as devices that can receive energy (ie. a machine that receives power and consumes it to do a task)
@@ -108,7 +108,7 @@ function energy:v1/api/break_cable
 function energy:v1/api/break_machine
   Call on a machine when broken to remove its connections
   
-Failure to call these breaking functions has negitive side-effects
+Failure to call these breaking functions has negative side-effects
 like machines remaining in the same network without being connected.
 Make sure to call these when needed!
 ```
