@@ -56,15 +56,6 @@ energy.transfer_rate
 ```
 
 ```
-energy.usage_rate
-  Il s'agit d'un score calculé égal au changement d'énergie de la machine *avant* le transfert.
-  C'est-à-dire que si une Machine a 50 unités d'énergie, puis génère 25 unités (total à 75),
-  puis envoie les 75 d'unités à une autre machine, alors ce score est égal à 25 unités
-  (pour les 25 unités d'énergie générées avant de transférer hors de la machine).
-  Ce score est fourni comme une source de données pratique et ne doit pas être modifié manuellement.
-```
-
-```
 energy.change_rate
   Il s'agit d'un score calculé égal au changement d'énergie de la machine *après* le transfert.
   C'est-à-dire que si une Machine a 50 unités d'énergie, puis génère 25 unités (total à 75),

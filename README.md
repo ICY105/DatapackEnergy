@@ -53,15 +53,6 @@ energy.transfer_rate
 ```
 
 ```
-energy.usage_rate
-  This is a computed score equal to the change in power of machine, before
-  transfering. That is, if a Machine has 50 units of power, then generates 25 units (total
-  75 units), then sends all 75 units to a battery, this score is equal to 25 units (for the
-  25 units of power generated before transfering it all out of the machine).
-  This score is provided as a convienent source of data and should not be changed manually.
-```
-
-```
 energy.change_rate
   This is a computed score equal to the change in power of machine, after
   transfering. That is, if a Machine has 50 units of power, then generates 25 units (total
