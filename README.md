@@ -107,10 +107,12 @@ Make sure to call these when needed!
 ```
 function energy:v1/api/modify_player_energy
   Call on a player to add or remove power from items stored in their inventory.
-  This treats the entire inv as a single pool of energy, and does not modify
-  power on specific items.
+  Items must be using the required NBT format (see below), and are ignored if they
+  are stacked (+2 items). It is recommended that 'inventory batteries' be unstackable.
+  This treats the entire inv as a single pool of energy, and cannot target specific
+  items in the player's inv.
   #player.in energy.data -> amount of energy to add (+) or remove (-)
-  #player.out energy.data <- 0 for failed to modify inv, 1 for suceeded.
+  #player.out energy.data <- 0 for failed to modify energy, 1 for suceeded.
 ```
 
 ## Function Tags
@@ -141,7 +143,7 @@ function #energy:v1/update_energy_item
 These are NBT data specifications for items, storage, or entities that hold special data.
 
 ```
-Item that store power use the following format:
+Items that store power use the following format. These can supply power when 'modify_player_energy' is called:
 Item.tag.energy{storage:<amount>,max_storage:<max_amount>}
 ```
 
