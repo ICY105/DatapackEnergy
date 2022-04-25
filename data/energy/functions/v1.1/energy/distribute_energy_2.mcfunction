@@ -16,3 +16,6 @@ execute if score #energy.temp energy.data matches ..-1 run scoreboard players se
 scoreboard players operation #energy.available energy.data -= #energy.temp energy.data
 scoreboard players operation #energy.spent energy.data += #energy.temp energy.data
 scoreboard players operation @s energy.storage += #energy.temp energy.data
+
+#call energy changed function
+function #energy:v1/energy_update

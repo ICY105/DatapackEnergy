@@ -133,6 +133,12 @@ function #energy:v1/cable_update
 ```
 
 ```
+function #energy:v1/energy_update
+  Called as and at machine when its energy storage is changed. Can be used to altar visual
+  effects that show energy storage, or manipulate other data related to energy storage.
+```
+
+```
 function #energy:v1/update_energy_item
   Called as a player when an item has been modified by the modify_player_energy function.
   The Item will be in storage at energy:temp list[0] - Modify this as needed (such as adding Lore

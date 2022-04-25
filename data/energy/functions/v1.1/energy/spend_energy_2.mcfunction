@@ -15,3 +15,6 @@ execute if score #energy.network_id energy.data = @s energy.network_id_north run
 execute if score #energy.network_id energy.data = @s energy.network_id_south run tag @s add energy.processed.south
 execute if score #energy.network_id energy.data = @s energy.network_id_east run tag @s add energy.processed.east
 execute if score #energy.network_id energy.data = @s energy.network_id_west run tag @s add energy.processed.west
+
+#call energy changed function
+function #energy:v1/energy_update
