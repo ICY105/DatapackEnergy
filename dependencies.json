@@ -1,0 +1,19 @@
+{
+  "namespaces": [
+    "energy",
+	"minecraft"
+  ],
+  "dependencies": [
+    {
+      "name": "Lantern Load",
+      "url": "https://github.com/LanternMC/load"
+    }
+  ],
+  "append_function_tags": [
+    {
+      "tag": "load:load",
+      "value": "energy:v1.1/load"
+    }
+  ],
+  "version":"v1.1"
+}
