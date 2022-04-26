@@ -134,7 +134,7 @@ function #energy:v1/cable_update
 
 ```
 function #energy:v1/energy_update
-  Called as and at machine when its energy storage is changed. Can be used to altar visual
+  Called as and at a machine when its energy storage value is changed. Can be used to altar visual
   effects that show energy storage, or manipulate other data related to energy storage.
 ```
 
