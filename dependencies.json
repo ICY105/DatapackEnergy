@@ -1,7 +1,6 @@
 {
   "namespaces": [
-    "energy",
-	"minecraft"
+    "energy"
   ],
   "dependencies": [
     {
@@ -12,7 +11,7 @@
   "append_function_tags": [
     {
       "tag": "load:load",
-      "value": "energy:v1.1/load"
+      "value": "#energy:load"
     }
   ],
   "version":"v1.1"
