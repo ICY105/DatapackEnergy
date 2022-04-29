@@ -110,10 +110,12 @@ Assurez-vous de les appeler quand cela est nécessaire !
 ```
 function energy:v1/api/modify_player_energy
   À appeler sur un joueur pour ajouter ou retirer de l'énergie des items stockés dans son inventaire.
+  Les items doivent utiliser le format nbt adéquat (voir en dessous), et sont ignorés si
+  ils sont stackés (+2 items). C'est recommandé de ne pas rendre stackable les 'batteries portables'.
   L'ensemble de l'inventaire est traité comme un seul pool d'énergie,
   donc ne modifie pas l'énergie sur des items spécifiques.
   #player.in energy.data -> quantité d'énergie à ajouter (+) ou à retirer (-)
-  #player.out energy.data <- 0 pour l'echec de la modification de l'inv, 1 pour la réussite.
+  #player.out energy.data <- 0 pour l'echec de la modification de l'énergie, 1 pour la réussite.
 ```
 
 ## Function Tags
@@ -134,6 +136,12 @@ function #energy:v1/cable_update
 ```
 
 ```
+function #energy:v1/energy_update
+  Appelé par et à une machine (as & at) lorsque son stockage d'énergie a changé. Peut être utilisé pour
+  mettre à jour le modèle de la machine, ou manipuler d'autres données liée au stockage d'énergie.
+```
+
+```
 function #energy:v1/update_energy_item
   Appelé par un joueur lorsqu'un item a été modifié par la fonction modify_player_energy.
   L'Item concerné sera dans un storage à energy:temp list[0] - Modifiez-le si nécessaire
@@ -144,8 +152,9 @@ function #energy:v1/update_energy_item
 Il s'agit de spécifications d'NBT data pour les items, storage, ou entités qui détiennent des informations.
 
 ```
-Les items qui stockent de l'énergie doivent utiliser le format suivant :
-Item.tag.energy{storage:<amount>,max_storage:<max_amount>}
+Les items qui stockent de l'énergie doivent utiliser le format suivant.
+Ils peuvent intéragir quand 'modify_player_energy' est appelé.
+  Item.tag.energy{storage:<amount>,max_storage:<max_amount>}
 ```
 
 ## How to use
