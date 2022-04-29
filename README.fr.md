@@ -153,7 +153,7 @@ Il s'agit de spécifications d'NBT data pour les items, storage, ou entités qui
 
 ```
 Les items qui stockent de l'énergie doivent utiliser le format suivant.
-Ils peuvent intéragir quand 'modify_player_energy' est appelé.
+Ils peuvent intéragir quand 'modify_player_energy' est appelé:
   Item.tag.energy{storage:<amount>,max_storage:<max_amount>}
 ```
 
