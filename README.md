@@ -159,3 +159,5 @@ Item.tag.energy{storage:<amount>,max_storage:<max_amount>}
 3. Merge the contents of `DatapackEnergy/data/load/tags/functions/load.json` and your own `data/load/tags/functions/load.json`
 4. Implement the API as described above.
 
+For easier mangament of dependencies, check out my project [Datapack Build Manager](https://github.com/ICY105/DatapackBuildManager).
+
