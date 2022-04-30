@@ -149,8 +149,9 @@ function #energy:v1/update_energy_item
 These are NBT data specifications for items, storage, or entities that hold special data.
 
 ```
-Items that store power use the following format. These can supply power when 'modify_player_energy' is called:
-Item.tag.energy{storage:<amount>,max_storage:<max_amount>}
+Items that store power use the following format.
+These can supply power when 'modify_player_energy' is called:
+  Item.tag.energy{storage:<amount>,max_storage:<max_amount>}
 ```
 
 ## How to use
