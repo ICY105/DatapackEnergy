@@ -1,7 +1,7 @@
 
 #remove power
-scoreboard players operation #energy.to_add energy.data = @s energy.transfer_capacity
-execute if score @s energy.storage < @s energy.transfer_capacity run scoreboard players operation #energy.to_add energy.data = @s energy.storage
+scoreboard players operation #energy.to_add energy.data = @s energy.transfer_rate
+execute if score @s energy.storage < @s energy.transfer_rate run scoreboard players operation #energy.to_add energy.data = @s energy.storage
 execute if score #energy.to_add energy.data > #energy.spent energy.data run scoreboard players operation #energy.to_add energy.data = #energy.spent energy.data
 
 scoreboard players operation @s energy.storage -= #energy.to_add energy.data
