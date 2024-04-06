@@ -151,7 +151,7 @@ These are NBT data specifications for items, storage, or entities that hold spec
 ```
 Items that store power use the following format.
 These can supply power when 'modify_player_energy' is called:
-  Item.tag.energy{storage:<amount>,max_storage:<max_amount>}
+  "minecraft:custom_data".energy{storage:<amount>,max_storage:<max_amount>}
 ```
 
 ## How to use
