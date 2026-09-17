@@ -20,22 +20,12 @@
 				"score": "energy.update_queue"
 			},
 			"test": {
-				"min": {
-					"type": "minecraft:score",
-					"target": {
-						"type": "minecraft:fixed",
-						"name": "#progress"
-					},
-					"score": "energy.data"
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#progress"
 				},
-				"max": {
-					"type": "minecraft:score",
-					"target": {
-						"type": "minecraft:fixed",
-						"name": "#progress"
-					},
-					"score": "energy.data"
-				}
+				"score": "energy.data"
 			}
 		}
 	]

@@ -5,44 +5,24 @@
 			"type": "minecraft:int_value_check",
 			"value": 1,
 			"test": {
-				"min": {
-					"type": "minecraft:score",
-					"target": {
-						"type": "minecraft:fixed",
-						"name": "#energy.major"
-					},
-					"score": "load.status"
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#energy.major"
 				},
-				"max": {
-					"type": "minecraft:score",
-					"target": {
-						"type": "minecraft:fixed",
-						"name": "#energy.major"
-					},
-					"score": "load.status"
-				}
+				"score": "load.status"
 			}
 		},
 		{
 			"type": "minecraft:int_value_check",
 			"value": 8,
 			"test": {
-				"min": {
-					"type": "minecraft:score",
-					"target": {
-						"type": "minecraft:fixed",
-						"name": "#energy.minor"
-					},
-					"score": "load.status"
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#energy.minor"
 				},
-				"max": {
-					"type": "minecraft:score",
-					"target": {
-						"type": "minecraft:fixed",
-						"name": "#energy.minor"
-					},
-					"score": "load.status"
-				}
+				"score": "load.status"
 			}
 		}
 	]

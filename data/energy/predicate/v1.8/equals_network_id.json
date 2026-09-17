@@ -6,21 +6,11 @@
 		"score": "energy.network_id"
 	},
 	"test": {
-		"min": {
-			"type": "minecraft:score",
-			"target": {
-				"type": "minecraft:fixed",
-				"name": "#predicate"
-			},
-			"score": "energy.data"
+		"type": "minecraft:score",
+		"target": {
+			"type": "minecraft:fixed",
+			"name": "#predicate"
 		},
-		"max": {
-			"type": "minecraft:score",
-			"target": {
-				"type": "minecraft:fixed",
-				"name": "#predicate"
-			},
-			"score": "energy.data"
-		}
+		"score": "energy.data"
 	}
 }
