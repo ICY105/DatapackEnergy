@@ -1,6 +1,8 @@
 {
   "pack": {
-    "pack_format": 8,
-    "description": "Datapack Energy Library"
+    "pack_format": 121,
+    "description": "Datapack Energy Library",
+    "min_format": [121, 0],
+    "max_format": [9999, 0]
   }
 }

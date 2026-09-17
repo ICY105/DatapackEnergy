@@ -1,39 +1,42 @@
-[
-	{
-		"condition": "minecraft:value_check",
-		"value": {
-			"type": "minecraft:score",
-			"target": "this",
-			"score": "energy.storage"
-		},
-		"range": {
-			"min": 1
-		}
-	},
-	{
-		"condition": "minecraft:value_check",
-		"value": {
-			"type": "minecraft:score",
-			"target": "this",
-			"score": "energy.update_queue"
-		},
-		"range": {
-			"min": {
+{
+	"type": "minecraft:all_of",
+	"terms": [
+		{
+			"type": "minecraft:int_value_check",
+			"value": {
 				"type": "minecraft:score",
-				"target": {
-					"type": "minecraft:fixed",
-					"name": "#progress"
-				},
-				"score": "energy.data"
+				"target": "this",
+				"score": "energy.storage"
 			},
-			"max": {
+			"test": {
+				"min": 1
+			}
+		},
+		{
+			"type": "minecraft:int_value_check",
+			"value": {
 				"type": "minecraft:score",
-				"target": {
-					"type": "minecraft:fixed",
-					"name": "#progress"
+				"target": "this",
+				"score": "energy.update_queue"
+			},
+			"test": {
+				"min": {
+					"type": "minecraft:score",
+					"target": {
+						"type": "minecraft:fixed",
+						"name": "#progress"
+					},
+					"score": "energy.data"
 				},
-				"score": "energy.data"
+				"max": {
+					"type": "minecraft:score",
+					"target": {
+						"type": "minecraft:fixed",
+						"name": "#progress"
+					},
+					"score": "energy.data"
+				}
 			}
 		}
-	}
-]
+	]
+}

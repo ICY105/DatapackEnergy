@@ -1,161 +1,161 @@
 {
-  "condition": "minecraft:any_of",
-  "terms": [
-    {
-      "condition": "minecraft:value_check",
-      "value": {
-        "type": "minecraft:score",
-        "target": "this",
-        "score": "energy.network_id_up"
-      },
-      "range": {
-        "min": {
-          "type": "minecraft:score",
-          "target": {
-            "type": "minecraft:fixed",
-            "name": "#predicate"
-          },
-          "score": "energy.data"
-        },
-        "max": {
-          "type": "minecraft:score",
-          "target": {
-            "type": "minecraft:fixed",
-            "name": "#predicate"
-          },
-          "score": "energy.data"
-        }
-      }
-    },
-	{
-      "condition": "minecraft:value_check",
-      "value": {
-        "type": "minecraft:score",
-        "target": "this",
-        "score": "energy.network_id_down"
-      },
-      "range": {
-        "min": {
-          "type": "minecraft:score",
-          "target": {
-            "type": "minecraft:fixed",
-            "name": "#predicate"
-          },
-          "score": "energy.data"
-        },
-        "max": {
-          "type": "minecraft:score",
-          "target": {
-            "type": "minecraft:fixed",
-            "name": "#predicate"
-          },
-          "score": "energy.data"
-        }
-      }
-    },
-	{
-      "condition": "minecraft:value_check",
-      "value": {
-        "type": "minecraft:score",
-        "target": "this",
-        "score": "energy.network_id_north"
-      },
-      "range": {
-        "min": {
-          "type": "minecraft:score",
-          "target": {
-            "type": "minecraft:fixed",
-            "name": "#predicate"
-          },
-          "score": "energy.data"
-        },
-        "max": {
-          "type": "minecraft:score",
-          "target": {
-            "type": "minecraft:fixed",
-            "name": "#predicate"
-          },
-          "score": "energy.data"
-        }
-      }
-    },
-	{
-      "condition": "minecraft:value_check",
-      "value": {
-        "type": "minecraft:score",
-        "target": "this",
-        "score": "energy.network_id_south"
-      },
-      "range": {
-        "min": {
-          "type": "minecraft:score",
-          "target": {
-            "type": "minecraft:fixed",
-            "name": "#predicate"
-          },
-          "score": "energy.data"
-        },
-        "max": {
-          "type": "minecraft:score",
-          "target": {
-            "type": "minecraft:fixed",
-            "name": "#predicate"
-          },
-          "score": "energy.data"
-        }
-      }
-    },
-	{
-      "condition": "minecraft:value_check",
-      "value": {
-        "type": "minecraft:score",
-        "target": "this",
-        "score": "energy.network_id_east"
-      },
-      "range": {
-        "min": {
-          "type": "minecraft:score",
-          "target": {
-            "type": "minecraft:fixed",
-            "name": "#predicate"
-          },
-          "score": "energy.data"
-        },
-        "max": {
-          "type": "minecraft:score",
-          "target": {
-            "type": "minecraft:fixed",
-            "name": "#predicate"
-          },
-          "score": "energy.data"
-        }
-      }
-    },
-	{
-      "condition": "minecraft:value_check",
-      "value": {
-        "type": "minecraft:score",
-        "target": "this",
-        "score": "energy.network_id_west"
-      },
-      "range": {
-        "min": {
-          "type": "minecraft:score",
-          "target": {
-            "type": "minecraft:fixed",
-            "name": "#predicate"
-          },
-          "score": "energy.data"
-        },
-        "max": {
-          "type": "minecraft:score",
-          "target": {
-            "type": "minecraft:fixed",
-            "name": "#predicate"
-          },
-          "score": "energy.data"
-        }
-      }
-    }
-  ]
+	"type": "minecraft:any_of",
+	"terms": [
+		{
+			"type": "minecraft:int_value_check",
+			"value": {
+				"type": "minecraft:score",
+				"target": "this",
+				"score": "energy.network_id_up"
+			},
+			"test": {
+				"min": {
+					"type": "minecraft:score",
+					"target": {
+						"type": "minecraft:fixed",
+						"name": "#predicate"
+					},
+					"score": "energy.data"
+				},
+				"max": {
+					"type": "minecraft:score",
+					"target": {
+						"type": "minecraft:fixed",
+						"name": "#predicate"
+					},
+					"score": "energy.data"
+				}
+			}
+		},
+		{
+			"type": "minecraft:int_value_check",
+			"value": {
+				"type": "minecraft:score",
+				"target": "this",
+				"score": "energy.network_id_down"
+			},
+			"test": {
+				"min": {
+					"type": "minecraft:score",
+					"target": {
+						"type": "minecraft:fixed",
+						"name": "#predicate"
+					},
+					"score": "energy.data"
+				},
+				"max": {
+					"type": "minecraft:score",
+					"target": {
+						"type": "minecraft:fixed",
+						"name": "#predicate"
+					},
+					"score": "energy.data"
+				}
+			}
+		},
+		{
+			"type": "minecraft:int_value_check",
+			"value": {
+				"type": "minecraft:score",
+				"target": "this",
+				"score": "energy.network_id_north"
+			},
+			"test": {
+				"min": {
+					"type": "minecraft:score",
+					"target": {
+						"type": "minecraft:fixed",
+						"name": "#predicate"
+					},
+					"score": "energy.data"
+				},
+				"max": {
+					"type": "minecraft:score",
+					"target": {
+						"type": "minecraft:fixed",
+						"name": "#predicate"
+					},
+					"score": "energy.data"
+				}
+			}
+		},
+		{
+			"type": "minecraft:int_value_check",
+			"value": {
+				"type": "minecraft:score",
+				"target": "this",
+				"score": "energy.network_id_south"
+			},
+			"test": {
+				"min": {
+					"type": "minecraft:score",
+					"target": {
+						"type": "minecraft:fixed",
+						"name": "#predicate"
+					},
+					"score": "energy.data"
+				},
+				"max": {
+					"type": "minecraft:score",
+					"target": {
+						"type": "minecraft:fixed",
+						"name": "#predicate"
+					},
+					"score": "energy.data"
+				}
+			}
+		},
+		{
+			"type": "minecraft:int_value_check",
+			"value": {
+				"type": "minecraft:score",
+				"target": "this",
+				"score": "energy.network_id_east"
+			},
+			"test": {
+				"min": {
+					"type": "minecraft:score",
+					"target": {
+						"type": "minecraft:fixed",
+						"name": "#predicate"
+					},
+					"score": "energy.data"
+				},
+				"max": {
+					"type": "minecraft:score",
+					"target": {
+						"type": "minecraft:fixed",
+						"name": "#predicate"
+					},
+					"score": "energy.data"
+				}
+			}
+		},
+		{
+			"type": "minecraft:int_value_check",
+			"value": {
+				"type": "minecraft:score",
+				"target": "this",
+				"score": "energy.network_id_west"
+			},
+			"test": {
+				"min": {
+					"type": "minecraft:score",
+					"target": {
+						"type": "minecraft:fixed",
+						"name": "#predicate"
+					},
+					"score": "energy.data"
+				},
+				"max": {
+					"type": "minecraft:score",
+					"target": {
+						"type": "minecraft:fixed",
+						"name": "#predicate"
+					},
+					"score": "energy.data"
+				}
+			}
+		}
+	]
 }
